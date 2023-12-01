@@ -3,8 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>ex-select</title>
+    <style type="text/css">
+        .ex-select {
+            display:inline-block;
+            position: relative;
+        }
+        .ex-select .ex-in-input {
+            height:22px;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+        }
+        .ex-select .ex-in-input:focus {
+            outline: 1px dashed #d2dad2;
+        }
+        .ex-select .ex-in-clear {
+            position: absolute;
+            right: 20px;
+            top: 1px;
+            cursor: pointer;
+        }
+        .ex-select .ex-in-down {
+            position: absolute;
+            right: 6px;
+            top: 0px;
+            cursor: pointer;
+        }
+        .ex-select .ex-in-check {
+            position: absolute;
+            right: 32px;
+            top: 0px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-
+<span class="ex-select">
+    <input type="text" class="ex-in-input">
+    <span class="ex-in-check">☑</span>
+    <span class="ex-in-clear">⤫</span>
+    <span class="ex-in-down">⌵</span>
+</span>
 </body>
 </html>
