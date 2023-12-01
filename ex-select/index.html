@@ -9,16 +9,22 @@
             position: relative;
         }
         .ex-select .ex-in-input {
-            height:22px;
+            height:26px;
             border: 1px solid #dddddd;
             border-radius: 3px;
         }
         .ex-select .ex-in-input:focus {
-            outline: 1px dashed #d2dad2;
+            outline: 1px dashed blue;
+        }
+        .ex-select .ex-in-check {
+            position: absolute;
+            right: 36px;
+            top: 2px;
+            cursor: pointer;
         }
         .ex-select .ex-in-clear {
             position: absolute;
-            right: 20px;
+            right: 22px;
             top: 1px;
             cursor: pointer;
         }
@@ -28,17 +34,17 @@
             top: 0px;
             cursor: pointer;
         }
-        .ex-select .ex-in-check {
-            position: absolute;
-            right: 32px;
-            top: 0px;
-            cursor: pointer;
+        .ex-select .ex-in-check,.ex-select .ex-in-clear,.ex-select .ex-in-down {
+            color: blue;
         }
     </style>
 </head>
 <body>
+<h1>欢迎使用 WebComponent</h1>
+<h3>ex-select控件，扩展select控件</h3>
+<label>请选择：</label>
 <span class="ex-select">
-    <input type="text" class="ex-in-input">
+    <input type="text" class="ex-in-input" placeholder="请选择">
     <span class="ex-in-check">☑</span>
     <span class="ex-in-clear">⤫</span>
     <span class="ex-in-down">⌵</span>
