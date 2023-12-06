@@ -10,11 +10,12 @@
         }
         .ex-select .ex-in-input {
             height:26px;
-            border: 1px solid #dddddd;
+            border: 1px solid #4FC3F7;
             border-radius: 3px;
+            width: 100%;
         }
         .ex-select .ex-in-input:focus {
-            outline: 1px dashed blue;
+            outline: 1px dashed #4FC3F7;
         }
         .ex-select .ex-in-check {
             position: absolute;
@@ -34,10 +35,32 @@
             top: 0px;
             cursor: pointer;
         }
-        .ex-select .ex-in-check,.ex-select .ex-in-clear,.ex-select .ex-in-down {
-            color: blue;
+        .ex-select .ex-in-list {
+            position: absolute;
+            top: 14px;
+            list-style: none;
+            padding-inline-start: 0px;
+            width: 100%;
+            display: none;
+            border: 1px solid #4FC3F7;
+        }
+        .ex-select .ex-in-list li:hover {
+            background-color:#BBDEFB
+        }
+        .ex-select {
+            color: #4FC3F7;
         }
     </style>
+    <script type="text/javascript" src="/assert/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+           $(".ex-select").toggle(function () {
+               $(this).find(".ex-in-list").show();
+           },function () {
+               $(this).find(".ex-in-list").hide();
+           });
+        });
+    </script>
 </head>
 <body>
 <h1>欢迎使用 WebComponent</h1>
@@ -48,6 +71,14 @@
     <span class="ex-in-check">☑</span>
     <span class="ex-in-clear">⤫</span>
     <span class="ex-in-down">⌵</span>
+    <ul class="ex-in-list">
+        <li>苹果</li>
+        <li>梨子</li>
+        <li>葡萄</li>
+        <li>莲雾</li>
+        <li>桃子</li>
+        <li>橘子</li>
+    </ul>
 </span>
 </body>
 </html>
